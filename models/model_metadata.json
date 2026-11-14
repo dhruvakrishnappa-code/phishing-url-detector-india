@@ -1,0 +1,24 @@
+{
+  "trained_at_utc": "2026-11-13T08:12:40Z",
+  "algorithm": "RandomForestClassifier(n_estimators=100, min_samples_leaf=5)",
+  "sklearn_version": "1.7.2",
+  "dataset": "Phishing.Database ACTIVE (MIT) + Tranco top-50k; see ADAPTATIONS.md",
+  "rows": 40000,
+  "phishing_rows": 20000,
+  "evaluation": "held-out 20% split grouped by registered domain",
+  "metrics": {
+    "accuracy": 0.7941,
+    "precision": 0.8307,
+    "recall": 0.7341,
+    "f1": 0.7794,
+    "roc_auc": 0.8756,
+    "confusion_matrix": {
+      "tn": 3434,
+      "fp": 592,
+      "fn": 1052,
+      "tp": 2905
+    },
+    "train_rows": 32017,
+    "test_rows": 7983
+  }
+}

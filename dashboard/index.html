@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Phishing URL Checker - India Edition</title>
+  <link rel="icon" href="/dashboard/assets/phishnot-logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/dashboard/styles.css" />
+</head>
+<body>
+<div class="container">
+  <header class="site-header">
+    <img src="/dashboard/assets/phishnot-logo.svg" alt="logo" width="40" height="40" />
+    <div><h1>Phishing URL Checker</h1><div class="muted">India Edition - for WhatsApp, SMS, email, UPI, bank, Aadhaar and PAN links</div></div>
+  </header>
+
+  <section class="card">
+    <h2>Paste a suspicious link</h2>
+    <form id="scanForm" class="check">
+      <input id="checkUrl" type="text" inputmode="url" autocomplete="off" maxlength="2048" placeholder="e.g. http://sbi-kyc-update.example.xyz/login" />
+      <button id="checkBtn" type="submit">Scan URL</button>
+    </form>
+    <label class="opt"><input type="checkbox" id="usePt" checked /> Also check PhishTank reputation (needs a free key on the server)</label>
+    <p class="notice" id="ptNotice">Privacy: the link is <b>never opened</b>. If the PhishTank check is on, the submitted URL is sent to PhishTank (phishtank.org) to look it up.</p>
+    <div id="examples" class="chips"></div>
+    <div id="result" aria-live="polite"></div>
+  </section>
+
+  <section class="card">
+    <div class="row">
+      <h2>Scan history</h2>
+      <div class="actions">
+        <button id="refreshBtn" class="ghost">Refresh</button>
+        <button id="clearBtn" class="danger">Clear history</button>
+      </div>
+    </div>
+    <div class="row filters">
+      <label>From <input type="date" id="dFrom" /></label>
+      <label>To <input type="date" id="dTo" /></label>
+      <a id="summaryLink" class="btn" href="#">Download summary PDF</a>
+    </div>
+    <div id="history" class="table-wrap"></div>
+  </section>
+
+  <footer class="muted small" id="footer"></footer>
+</div>
+<script src="/dashboard/app.js"></script>
+</body>
+</html>

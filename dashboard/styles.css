@@ -1,0 +1,31 @@
+:root{--bg:#f4f6fa;--card:#fff;--text:#1c2430;--muted:#5c6773;--blue:#0b78d1;--red:#b71c1c;--orange:#e65100;--green:#1b5e20;--grey:#455a64}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
+.container{max-width:900px;margin:0 auto;padding:16px}
+.site-header{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+h1{margin:0;font-size:22px} h2{margin:0 0 10px;font-size:18px}
+.card{background:var(--card);border-radius:12px;padding:16px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.muted{color:var(--muted)} .small{font-size:12px}
+.check{display:flex;gap:8px}
+input[type=text],input[type=date]{padding:12px;border:1px solid #c5cdd8;border-radius:8px;font-size:16px;min-width:0}
+.check input{flex:1}
+button,.btn{padding:12px 16px;border:0;border-radius:8px;background:var(--blue);color:#fff;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block}
+button.ghost{background:#e8eef6;color:var(--text)} button.danger{background:var(--red)}
+.opt{display:block;margin-top:10px;font-size:14px}
+.notice{font-size:13px;color:var(--muted);background:#eef4fb;padding:8px 10px;border-radius:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.chip{font-size:12px;padding:6px 10px;border-radius:14px;background:#e8eef6;color:var(--text);cursor:pointer;border:0}
+.result-box{margin-top:12px;padding:14px;border-radius:10px;border-left:6px solid var(--grey);background:#f7f9fc}
+.result-box.r-known{border-color:var(--red)} .result-box.r-susp{border-color:var(--orange)} .result-box.r-none{border-color:var(--green)}
+.verdict{font-size:20px;font-weight:700}
+.badge{display:inline-block;padding:2px 10px;border-radius:12px;color:#fff;font-size:12px;font-weight:700;margin-left:6px}
+.b-HIGH{background:var(--red)} .b-MEDIUM{background:var(--orange)} .b-LOW{background:var(--green)}
+.url{word-break:break-all;font-family:monospace;font-size:13px;margin:6px 0}
+.result-box ul{padding-left:20px;margin:8px 0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.filters{justify-content:flex-start;margin-bottom:10px} .filters label{font-size:13px;display:flex;gap:6px;align-items:center}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px;border-bottom:1px solid #e6eaf0;vertical-align:top}
+td.u{word-break:break-all;font-family:monospace;font-size:12px;min-width:180px}
+@media(max-width:600px){.check{flex-direction:column}h1{font-size:19px}}

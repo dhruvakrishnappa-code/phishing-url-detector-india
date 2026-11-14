@@ -1,0 +1,49 @@
+Command: python -m pytest -v   (clean virtualenv, Python 3.10.12, Linux, run 2026-11-13)
+
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_rejected
+tests/test_app.py::test_bad_input_via_api PASSED
+tests/test_app.py::test_schemeless_gets_http PASSED
+tests/test_app.py::test_safe_examples_not_flagged
+tests/test_app.py::test_safe_examples_not_flagged
+tests/test_app.py::test_safe_examples_not_flagged
+tests/test_app.py::test_suspicious_examples_flagged
+tests/test_app.py::test_suspicious_examples_flagged
+tests/test_app.py::test_suspicious_examples_flagged
+tests/test_app.py::test_score_range_and_levels PASSED
+tests/test_app.py::test_rules_indian_patterns PASSED
+tests/test_app.py::test_model_missing_gives_setup_error PASSED
+tests/test_app.py::test_phishtank_found PASSED
+tests/test_app.py::test_phishtank_not_found PASSED
+tests/test_app.py::test_phishtank_failure_falls_back_to_local
+tests/test_app.py::test_phishtank_failure_falls_back_to_local
+tests/test_app.py::test_phishtank_failure_falls_back_to_local
+tests/test_app.py::test_phishtank_uses_timeout PASSED
+tests/test_app.py::test_submitted_url_is_never_fetched PASSED
+tests/test_app.py::test_redaction PASSED
+tests/test_app.py::test_health PASSED
+tests/test_app.py::test_scan_saves_history_and_clear PASSED
+tests/test_app.py::test_history_stores_no_raw_query PASSED
+tests/test_app.py::test_single_pdf PASSED
+tests/test_app.py::test_summary_pdf_and_range PASSED
+tests/test_app.py::test_no_secrets_in_pdf PASSED
+tests/test_app.py::test_no_wildcard_cors_by_default PASSED
+tests/test_app.py::test_security_headers_and_no_debug PASSED
+tests/test_app.py::test_dashboard_served PASSED
+tests/test_app.py::test_rate_limit PASSED
+tests/test_app.py::test_dashboard_assets_load PASSED
+
+Result: 43 passed, 0 failed
+
+Manual checks (real running app under gunicorn): /health OK; 3 safe-looking + 3 suspicious synthetic URLs scanned with no PhishTank key; PDFs downloaded and opened; PhishTank NOT tested against the real service (no key).
