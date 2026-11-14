@@ -1,0 +1,4 @@
+# Dev-only extras: dataset building, training and tests.
+# Runtime deps for `python app.py` are all in requirements.txt.
+pandas==2.3.3
+pytest==9.2.0

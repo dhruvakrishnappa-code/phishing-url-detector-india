@@ -205,9 +205,14 @@ def load_model(path=None):
 
 
 def ml_probability(url, path=None):
-    import pandas as pd
     model, cols = load_model(path)
-    x = pd.DataFrame([extract_host_features(url)])[cols]
+    row = extract_host_features(url)
+    try:
+        import pandas as pd
+        x = pd.DataFrame([row])[cols]
+    except ImportError:
+        # serverless runtime ships without pandas; same feature order, same probabilities
+        x = [[row.get(c, 0) for c in cols]]
     return float(model.predict_proba(x)[0][1])
 
 

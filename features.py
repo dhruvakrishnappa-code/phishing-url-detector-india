@@ -1,7 +1,10 @@
 import re
 import tldextract
 from urllib.parse import urlparse
-import pandas as pd
+try:
+    import pandas as pd
+except ImportError:  # serverless runtime ships without pandas
+    pd = None
 import os
 import json
 try:
